@@ -50,7 +50,7 @@ public class TestClass {
 
     }
     @Test
-    public  void test3()
+    public  void test4()
     {
         restDataSetup=RestDataSetup.restDataSetup(url,path,params,headers,"","GET","");
         response= restBaseSet.getResponse(restDataSetup);
