@@ -23,6 +23,7 @@ public class TestClass {
     {
         restDataSetup=RestDataSetup.restDataSetup(url,path,params,headers,"","GET","");
         response= restBaseSet.getResponse(restDataSetup);
+        //Bhaskar
 
 
 
@@ -30,6 +31,16 @@ public class TestClass {
 
     @Test
     public  void test1()
+    {
+        restDataSetup=RestDataSetup.restDataSetup(url,path,params,headers,"","GET","");
+        response= restBaseSet.getResponse(restDataSetup);
+        String res= response.getBody().asString();
+        JsonPath obj = new JsonPath(res);
+        res = obj.getString("obj1.obj2.name");
+
+    }
+    @Test
+    public  void test2()
     {
         restDataSetup=RestDataSetup.restDataSetup(url,path,params,headers,"","GET","");
         response= restBaseSet.getResponse(restDataSetup);
