@@ -49,4 +49,14 @@ public class TestClass {
         res = obj.getString("obj1.obj2.name");
 
     }
+    @Test
+    public  void test3()
+    {
+        restDataSetup=RestDataSetup.restDataSetup(url,path,params,headers,"","GET","");
+        response= restBaseSet.getResponse(restDataSetup);
+        String res= response.getBody().asString();
+        JsonPath obj = new JsonPath(res);
+        res = obj.getString("obj1.obj2.name");
+
+    }
 }
