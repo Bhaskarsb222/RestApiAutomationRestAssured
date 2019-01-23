@@ -56,7 +56,7 @@ public class TestClass {
         response= restBaseSet.getResponse(restDataSetup);
         String res= response.getBody().asString();
         JsonPath obj = new JsonPath(res);
-        res = obj.getString("objjvdjdv1.o");
+        res = obj.getString("objjvdjdv.o");
 
     }
 }
